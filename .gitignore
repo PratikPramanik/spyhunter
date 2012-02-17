@@ -1,0 +1,17 @@
+# Ignores Assets
+# /Images/*
+# /Sounds/*
+
+# Swap files
+*.swp
+
+# other
+*~
+.project
+.DS_Store
+
+# Ignore project files
+*.jcd
+*.jcp
+*.jcu
+*.jcw

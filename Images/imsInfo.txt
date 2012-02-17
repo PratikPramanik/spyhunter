@@ -1,0 +1,18 @@
+// title/help screen
+o title.gif
+o gameover.gif
+
+// scenery images
+o road.gif
+
+//car images
+o DB9final.gif
+o BMWfinal.gif
+
+//fireball images 
+o fireball.gif
+o bullets-big.gif
+o enemyBullet.gif
+
+//explosion related
+s explosion.gif 5

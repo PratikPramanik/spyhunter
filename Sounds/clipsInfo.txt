@@ -1,0 +1,10 @@
+
+// explosion clips
+
+explode1 explo1.wav
+explode2 laser.wav
+explode3 explode3.wav
+
+//misc
+
+menu playwithhelpscreen.wav
