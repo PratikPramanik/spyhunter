@@ -13,7 +13,11 @@
     Sources: Killer Game Programming dude
  */
 
-import java.awt.*; 
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.geom.AffineTransform;
+import java.awt.image.ImageObserver;
 
 public abstract class Projectile extends Sprite
 {
@@ -108,25 +112,27 @@ public abstract class Projectile extends Sprite
 	/**
 	 * Adjust the fireball's position.
 	 */	
-  	abstract public void initPosition(); 
+   // This method will be implemented in the child classes
+   abstract public void initPosition();
   	
   	/**
 	 * Tests if either an enemy fit a player or vice-versa. If someone hit someone, then the appropriate 
 	 * health meter goes down. Depending on the implimentation, either ask the enemy car manager if 
 	 * the projectile hit an enemy, or test if player car is hit.
 	 */
-  	abstract public void hasHitCar(); 
-  	
+	  // This method will be implemented in the child classes
+	  abstract public void hasHitCar();
+	 	
 	/**
 	 * Updates the projectile's location and if it has hit a car, decrements that car's health
 	 */	
 	//methods whose implimentations are shared amongst the enemies and player
-  	public void updateSprite()
-  	{ 
-  		hasHitCar();
-    	//goneOffScreen();
-    	super.updateSprite();
-  	}
+	 	public void updateSprite()
+	 	{ 
+	 		hasHitCar();
+	   	//goneOffScreen();
+	   	super.updateSprite();
+	 	}
   	
 	/**
 	 * Method largely replaced by a similar test in ProjectileManager. It should test if a projectile flew off screen and 
