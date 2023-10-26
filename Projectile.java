@@ -5,9 +5,9 @@
     Period: 4
     Assignment: FinalProject, SpyHunter
     Version: Final
-    
-    Discription: This is an abstract class that contains all necessary attributes and methods for two different 
-    types of projectiles. It is up to those children classes to define some of the generic methods outlined. 
+
+    Discription: This is an abstract class that contains all necessary attributes and methods for two different
+    types of projectiles. It is up to those children classes to define some of the generic methods outlined.
     Essentially, a projectile is a bullet and can update itself, draw itself and check for interaction with cars.
               
     Sources: Killer Game Programming dude
