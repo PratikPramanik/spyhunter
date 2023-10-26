@@ -71,16 +71,11 @@ public class ImagesPlayer
   {
     imName = nm;
     animPeriod = ap; 
-    seqDuration = d;
+    seqDuration = Math.max(d, 0.5);
     isRepeating = isr;
     imsLoader = il;
 
     animTotalTime = 0L;
-
-    if (seqDuration < 0.5) {
-      System.out.println("Warning: minimum sequence duration is 0.5 sec.");
-      seqDuration = 0.5;
-    }
 
     if (!imsLoader.isLoaded(imName)) {
       System.out.println(imName + " is not known by the ImagesLoader");
