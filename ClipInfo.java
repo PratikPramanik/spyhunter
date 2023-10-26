@@ -22,8 +22,18 @@
      added checkDuration() and DecimalFormat df
 */
 
-import java.io.*;
-import javax.sound.sampled.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineEvent;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.text.DecimalFormat;
 
 
@@ -51,8 +61,8 @@ public class ClipInfo implements LineListener
   {
     try {
       // link an audio stream to the sound clip's file
-      AudioInputStream stream = AudioSystem.getAudioInputStream(
-                          getClass().getResource(fnm) );
+      Path filePath = Paths.get(getClass().getResource(fnm).toURI());
+      AudioInputStream stream = AudioSystem.getAudioInputStream(filePath);
 
       AudioFormat format = stream.getFormat();
 
